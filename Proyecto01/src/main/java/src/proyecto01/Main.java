@@ -13,6 +13,6 @@ package src.proyecto01;
 public class Main {
     public static void main(String[] agrs){
             System.out.println("Hola mundo!");
-            System.out.println("¡Enzo gay! bien gay!");
+            System.out.println("¡Enzo gay! bien gay! Super playo");
     }
 }
