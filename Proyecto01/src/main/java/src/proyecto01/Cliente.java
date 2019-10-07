@@ -5,6 +5,8 @@
  */
 package src.proyecto01;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pc
@@ -12,11 +14,17 @@ package src.proyecto01;
 public class Cliente extends Persona{
     private String provincia = null;
     private String canton = null;
-    public Cliente(String pProvincia,String pCanton,String pNombre,String pApellido,String pIdentificacion,String pFechaCumple,String pCorreo){
-        super(pNombre,pApellido,pIdentificacion,pFechaCumple,pCorreo);
+    private ArrayList<Vehiculo> listaVehiculos = new ArrayList();
+    private static ArrayList<Cliente> listaClientes = new ArrayList();
+    
+    public Cliente(String pProvincia,String pCanton,String pNombreApellido,String pIdentificacion,String tipoIdentificacion,String pFechaCumple,String pTelefono,String pCorreo){
+        super(pNombreApellido,pIdentificacion,tipoIdentificacion,pFechaCumple,pTelefono,pCorreo);
         provincia = pProvincia;
         canton = pCanton;
+        listaClientes.add(this);
     }
+    
+    public Cliente () {}
 
     public String getProvincia() {
         return provincia;
@@ -32,6 +40,14 @@ public class Cliente extends Persona{
 
     public void setCanton(String canton) {
         this.canton = canton;
+    }
+
+    public static ArrayList<Cliente> getListaClientes() {
+        return listaClientes;
+    }
+    
+    public void agregarVehiculo(Vehiculo nVehiculo) {
+        listaVehiculos.add(nVehiculo);
     }
     
 }

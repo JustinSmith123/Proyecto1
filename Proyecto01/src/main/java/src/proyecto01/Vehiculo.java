@@ -5,6 +5,8 @@
  */
 package src.proyecto01;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pc
@@ -14,11 +16,14 @@ public class Vehiculo {
     private Modelo model = null;
     private String anno = null;
     private String placa = null;
+    private ArrayList<Vehiculo> listaVehiculos = new ArrayList();
+    
     public Vehiculo(Marca pMarca,Modelo pModelo, String pAnno, String pPlaca){
         marca = pMarca;
         model = pModelo;
         anno = pAnno;
         placa = pPlaca;
+        listaVehiculos.add(this);
     }
 
     public Marca getMarca() {
@@ -52,5 +57,8 @@ public class Vehiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    
+
+    public ArrayList<Vehiculo> getListaVehiculos() {
+        return listaVehiculos;
+    }
 }

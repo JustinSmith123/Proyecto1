@@ -10,39 +10,53 @@ package src.proyecto01;
  * @author pc
  */
 public class Persona {
-    private String nombre = null;
-    private String apellido = null;
-    private String identificacion = null;  
+    private String nombreApellido = null;
+    private String identificacion = null; 
+    private String tipoIdentificacion = null;
     private String fechaCumple = null;
+    private String telefono = null;
     private String correoElectronico = null;
-    public Persona(String pNombre,String pApellido,String pIdentificacion,String pFechaCumple,String pCorreo){
-        nombre = pNombre;
-        apellido = pApellido;
+    public Persona(String pNombre,String pIdentificacion,String pTipoIdentificacion, String pFechaCumple,String pTelefono,String pCorreo){
+        nombreApellido = pNombre;
         identificacion = pIdentificacion;
+        tipoIdentificacion = pTipoIdentificacion;
         fechaCumple = pFechaCumple;
+        telefono = pTelefono;
         correoElectronico = pCorreo;
     }
+    
+    public Persona() {}
 
     public String getNombre() {
-        return nombre;
+        return nombreApellido;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.nombreApellido = nombre;
     }
 
     public String getIdentificacion() {
         return identificacion;
     }
 
+    public String getNombreApellido() {
+        return nombreApellido;
+    }
+
+    public void setNombreApellido(String nombreApellido) {
+        this.nombreApellido = nombreApellido;
+    }
+
+    public String getTipoIdentificacion() {
+        return tipoIdentificacion;
+    }
+
+    public void setTipoIdentificacion(String tipoIdentificacion) {
+        this.tipoIdentificacion = tipoIdentificacion;
+    }
+    
+    
+    
     public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
     }
@@ -61,6 +75,14 @@ public class Persona {
 
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
     
 }
